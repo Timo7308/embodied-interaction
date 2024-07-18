@@ -270,7 +270,7 @@
                     "Third AI question" => $_SESSION['third_ai_question'],
                     "User's answer to the third question" => $_SESSION['third_user_answer'],
                     "AI ending" => $_SESSION['ai_final_sentences'],
-                    "1. How much experience do you have with AI systems?" => $_SESSION['ai_experience'],
+                    "1. My discussion with the system felt very natural and authentic." => $_SESSION['ai_experience'],
                     "2. Did your discussion with the system feel natural and authentic?" => $_SESSION['natural_status'],
                     "3. How much did you like the system?" => $_SESSION['system_like_status'],
                     "4. Do you use AI systems in other contexts than learning?" => $_SESSION['ai_use_other'],
