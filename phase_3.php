@@ -55,22 +55,26 @@
             
             <br /><h5>Phase 3: Questions about AI Experiences</h5><br />
             
-            <p>1. How much experience do you have with AI systems?</p>
+            <p>1. My discussion with the system felt very natural and authentic.</p>
             <div class="form-check form-check-inline">
               <input class="form-check-input" type="radio" name="ai_experience" value="No Experience" required>
-              <label class="form-check-label" for="inlineRadio1">No Experience</label>
+              <label class="form-check-label" for="inlineRadio1">Disagree</label>
             </div>
             <div class="form-check form-check-inline">
               <input class="form-check-input" type="radio" name="ai_experience" value="Beginner" required>
-              <label class="form-check-label" for="inlineRadio2">Beginner</label>
+              <label class="form-check-label" for="inlineRadio2">Slightly Disagree</label>
             </div>
             <div class="form-check form-check-inline">
               <input class="form-check-input" type="radio" name="ai_experience" value="Intermediate" required>
-              <label class="form-check-label" for="inlineRadio3">Intermediate</label>
+              <label class="form-check-label" for="inlineRadio3">Neutral</label>
             </div> 
             <div class="form-check form-check-inline">
               <input class="form-check-input" type="radio" name="ai_experience" value="Advanced" required>
-              <label class="form-check-label" for="inlineRadio2">Advanced</label>
+              <label class="form-check-label" for="inlineRadio2">Slightly Agree</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="ai_experience" value="Advanced" required>
+              <label class="form-check-label" for="inlineRadio2">Agree</label>
             </div>
             <br /><br />
             
