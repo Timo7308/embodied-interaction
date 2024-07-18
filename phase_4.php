@@ -174,7 +174,7 @@
             echo "<h3>Phase 3: Questions about AI Experiences</h3><br />";
         ?>
 
-            <p>1. How much experience do you have with AI systems? <span style="color: red;"><?php echo $_SESSION['ai_experience']; ?></span></p>
+            <p>1. My discussion with the system felt very natural and authentic. <span style="color: red;"><?php echo $_SESSION['ai_experience']; ?></span></p>
             <p>2. Did your discussion with the system felt natural and authentic? <span style="color: red;"><?php echo $_SESSION['natural_status']; ?></span></p>
             <p>3. How much did you like the system? <span style="color: red;"><?php echo $_SESSION['system_like_status']; ?></span></p>
             <p>4. Do you use AI systems in other contexts than learning? <span style="color: red;"><?php echo $_SESSION['ai_use_other']; ?></span></p>
