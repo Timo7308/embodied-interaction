@@ -61,7 +61,7 @@
 <body>
 
     <div class="chat-container">
-        <?php include('menu.php'); ?>
+      
         
         <h5>Phase 0: Demographic Data</h5><br />
           

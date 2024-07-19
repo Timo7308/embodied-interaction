@@ -50,7 +50,7 @@
 <body>
 
     <div class="chat-container">
-        <?php include('menu.php'); ?>
+       
         <form action="phase_4.php" method="POST">
             
             <br /><h5>Phase 3: Questions about AI Experiences</h5><br />
@@ -78,41 +78,53 @@
             </div>
             <br /><br />
             
-            <p>2. Did your discussion with the system feel natural and authentic?</p>
+            <p>2. I liked the interaction with the system and had fun while doing it.</p>
             <div class="form-check form-check-inline">
               <input class="form-check-input" type="radio" name="natural_status" value="NotatAllNatural" required>
-              <label class="form-check-label" for="inlineRadio1">Not at All Natural</label>
+              <label class="form-check-label" for="inlineRadio1">Disagree</label>
             </div>
             <div class="form-check form-check-inline">
               <input class="form-check-input" type="radio" name="natural_status" value="SomewhatUnnatural" required>
-              <label class="form-check-label" for="inlineRadio2">Somewhat Unnatural</label>
+              <label class="form-check-label" for="inlineRadio2">Slightly Disagree</label>
             </div>
             <div class="form-check form-check-inline">
               <input class="form-check-input" type="radio" name="natural_status" value="MostlyNatural" required>
-              <label class="form-check-label" for="inlineRadio2">Mostly Natural</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="natural_status" value="CompletelyNatural" required>
-              <label class="form-check-label" for="inlineRadio2">Completely Natural</label>
-            </div>
-            <br /><br />
-            
-            <p>3. How much did you like the system?</p>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="system_like_status" value="Disliked" required>
-              <label class="form-check-label" for="inlineRadio1">Disliked</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="system_like_status" value="Neutral" required>
               <label class="form-check-label" for="inlineRadio2">Neutral</label>
             </div>
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="system_like_status" value="Liked" required>
-              <label class="form-check-label" for="inlineRadio3">Liked</label>
-            </div> 
+              <input class="form-check-input" type="radio" name="natural_status" value="CompletelyNatural" required>
+              <label class="form-check-label" for="inlineRadio2">Slightly Agree</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="natural_status" value="CompletelyNatural" required>
+              <label class="form-check-label" for="inlineRadio2">Agree</label>
+            </div>
             <br /><br />
             
-            <p>4. Do you use AI systems in other contexts than learning?</p>
+            <p>3. When using an AI system I have complete trust in it.</p>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="natural_status" value="NotatAllNatural" required>
+              <label class="form-check-label" for="inlineRadio1">Disagree</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="natural_status" value="SomewhatUnnatural" required>
+              <label class="form-check-label" for="inlineRadio2">Slightly Disagree</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="natural_status" value="MostlyNatural" required>
+              <label class="form-check-label" for="inlineRadio2">Neutral</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="natural_status" value="CompletelyNatural" required>
+              <label class="form-check-label" for="inlineRadio2">Slightly Agree</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="natural_status" value="CompletelyNatural" required>
+              <label class="form-check-label" for="inlineRadio2">Agree</label>
+            </div>
+            <br /><br />
+            
+            <p>4. How often do you use AI systems in other contexts than learning?</p>
             <div class="form-check form-check-inline">
               <input class="form-check-input" type="radio" name="ai_use_other" value="Never" required>
               <label class="form-check-label" for="inlineRadio1">Never</label>
@@ -135,26 +147,30 @@
             </div> 
             <br /><br />
             
-            <p>5. How much trust do you have in AI systems?</p>
+            <p>5. How much experience do you have with AI systems?</p>
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="trust_status" value="NoTrust" required>
-              <label class="form-check-label" for="inlineRadio1">No Trust</label>
+              <input class="form-check-input" type="radio" name="natural_status" value="NotatAllNatural" required>
+              <label class="form-check-label" for="inlineRadio1">No Experience</label>
             </div>
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="trust_status" value="ModerateTrust" required>
-              <label class="form-check-label" for="inlineRadio2">Moderate Trust</label>
+              <input class="form-check-input" type="radio" name="natural_status" value="SomewhatUnnatural" required>
+              <label class="form-check-label" for="inlineRadio2">Little Experience</label>
             </div>
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="trust_status" value="HighTrust" required>
-              <label class="form-check-label" for="inlineRadio3">High Trust</label>
-            </div> 
+              <input class="form-check-input" type="radio" name="natural_status" value="MostlyNatural" required>
+              <label class="form-check-label" for="inlineRadio2">Moderate Experience</label>
+            </div>
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="trust_status" value="CompleteTrust" required>
-              <label class="form-check-label" for="inlineRadio3">Complete Trust</label>
-            </div> 
+              <input class="form-check-input" type="radio" name="natural_status" value="CompletelyNatural" required>
+              <label class="form-check-label" for="inlineRadio2">Good Experience</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="natural_status" value="CompletelyNatural" required>
+              <label class="form-check-label" for="inlineRadio2">Extensive Experience</label>
+            </div>
             <br /><br />
         
-            <p>6. Anything you wanna say or comment on?</p>
+            <p>6. Would you like to tell us anything else?</p>
              <div class="form-group">
                 <textarea class="form-control" name="final_comment" rows="3"></textarea>
             </div>

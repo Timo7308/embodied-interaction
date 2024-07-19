@@ -175,11 +175,11 @@
         ?>
 
             <p>1. My discussion with the system felt very natural and authentic. <span style="color: red;"><?php echo $_SESSION['ai_experience']; ?></span></p>
-            <p>2. Did your discussion with the system felt natural and authentic? <span style="color: red;"><?php echo $_SESSION['natural_status']; ?></span></p>
-            <p>3. How much did you like the system? <span style="color: red;"><?php echo $_SESSION['system_like_status']; ?></span></p>
-            <p>4. Do you use AI systems in other contexts than learning? <span style="color: red;"><?php echo $_SESSION['ai_use_other']; ?></span></p>
-            <p>5. How much trust do you have in AI systems? <span style="color: red;"><?php echo $_SESSION['trust_status']; ?></span></p>
-            <p>6. Anything you wanna say or comment on?<br /><span style="color: red;"><?php echo $_SESSION['final_comment']; ?></span></p>
+            <p>2. I liked the interaction with the system and had fun while doing it. <span style="color: red;"><?php echo $_SESSION['natural_status']; ?></span></p>
+            <p>3. When using an AI system I have complete trust in it. <span style="color: red;"><?php echo $_SESSION['system_like_status']; ?></span></p>
+            <p>4. How often do you use AI systems in other contexts than learning? <span style="color: red;"><?php echo $_SESSION['ai_use_other']; ?></span></p>
+            <p>5. How much experience do you have with AI systems? <span style="color: red;"><?php echo $_SESSION['trust_status']; ?></span></p>
+            <p>6. Would you like to tell us anything else?<br /><span style="color: red;"><?php echo $_SESSION['final_comment']; ?></span></p>
         
         <?php
 
@@ -271,11 +271,11 @@
                     "User's answer to the third question" => $_SESSION['third_user_answer'],
                     "AI ending" => $_SESSION['ai_final_sentences'],
                     "1. My discussion with the system felt very natural and authentic." => $_SESSION['ai_experience'],
-                    "2. Did your discussion with the system feel natural and authentic?" => $_SESSION['natural_status'],
-                    "3. How much did you like the system?" => $_SESSION['system_like_status'],
-                    "4. Do you use AI systems in other contexts than learning?" => $_SESSION['ai_use_other'],
-                    "5. How much trust do you have in AI systems?" => $_SESSION['trust_status'],
-                    "6. Anything you wanna say or comment on?" => $_SESSION['final_comment']
+                    "2. I liked the interaction with the system and had fun while doing it." => $_SESSION['natural_status'],
+                    "3. When using an AI system I have complete trust in it." => $_SESSION['system_like_status'],
+                    "4. How often do you use AI systems in other contexts than learning?" => $_SESSION['ai_use_other'],
+                    "5. How much experience do you have with AI systems?" => $_SESSION['trust_status'],
+                    "6. Would you like to tell us anything else?" => $_SESSION['final_comment']
                 );
                 
                 // Append the new data to the existing array
