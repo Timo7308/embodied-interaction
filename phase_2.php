@@ -123,7 +123,6 @@
     <div class="chat-container">
         <?php include('menu.php'); ?>
         
-        
         <?php 
         
 
@@ -151,8 +150,7 @@
                 
 ?>
 
-        <h5>Phase 2: Interaction</h5>
-        <?php //echo "System responds in <span style='color: red;'>".$randomMood."</span> way!<br />"; ?>
+<h5>Phase 2: Interaction</h5>
         <div class="message left">
             <p>Let's chat! Please select a Topic!</p>
             <form action="" method="post">
@@ -172,166 +170,96 @@
             </form>
         </div>
         <br />
-
-<?php
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-            }
-        ?>
-
-
-
         <?php
-            $topic = $_POST['topic'];
-            
-            
-            
-            $stepCounter = 1;
-            //echo "<p>Your Chosen Topic: ".$topic."</p>";
+        }
         ?>
-            <?php 
-                
-                if($_POST['topic']){
-                    
-                    $_SESSION['topic'] = $_POST['topic'];
-                    
-                    echo "<div class='message right'>";
-                    echo $topic;
-                    echo "</div><br /><br />";
-                }
-            ?>
-        
-            <?php
-                if($_POST['topic']){
-                    $stepCounter++;
-                    echo "<div class='message left'>";
-                    $first_prompt = "To the question: about which topic do you want to talk about, the user replies: $topic. Write one $randomMood comment to the user's reply. And ask another $randomMood short question related to the same topic.";
-                    $firstPromptResponse = sendToApi($first_prompt); 
-                    $_SESSION['first_ai_question'] = $firstPromptResponse;
-                    //echo $randomMood;
-            ?>
-                    <!--<p><em>The system responds in <span style="color: red;"><?php //echo $_SESSION['randomMood']; ?> </span>way!</em></p>-->
-                    <form method="post">
-                        <textarea type="text" name="input_one" placeholder="Type your answer..." class="form-control"></textarea>
-                        <br /><input type="submit" value="Submit" class="btn btn-success">
-                    </form>
-            <?php
-                    echo "</div>";
-                }
-            ?>
-            <?php 
-            
-                if($_POST['input_one']){
-                    echo "<div class='message right'>";
-            
-                    $input_one = $_POST['input_one'];
-                    echo $input_one;
-                    $_SESSION['first_user_answer'] = $input_one;
-                    
-                    echo "</div><br /><br />";
-                }
-            ?>
-            
-            <?php
-                if($_POST['input_one']){
-                    echo "<div class='message left'>";
-                    $second_prompt = "To the question: $firstPromptResponse, the user replies: $input_one. Write one $randomMood comment to the user's reply. And ask another $randomMood short question related to the same topic.";
-                    $secondPromptResponse = sendToApi($second_prompt);
-                    $_SESSION['second_ai_question'] = $secondPromptResponse;
-                    //echo $randomMood;
-            ?>
-                    <!--<p><em>The system responds in <span style="color: red;"><?php //echo $_SESSION['randomMood']; ?> </span>way!</em></p>-->
-                    <form method="post">
-                        <textarea type="text" name="input_two" placeholder="Type your answer..." class="form-control"></textarea>
-                        <br /><input type="submit" value="Submit" class="btn btn-success">
-                    </form>
-            <?php
-                    echo "</div>";
-                }
-            ?>
-            
-
-            <?php 
-            
-                if($_POST['input_two']){
-                    echo "<div class='message right'>";
-            
-                    $input_two = $_POST['input_two'];
-                    echo $input_two;
-                    $_SESSION['second_user_answer'] = $input_two;
-                    
-                    echo "</div><br /><br />";
-                }
-            ?>
-            
-            <?php
-                if($_POST['input_two']){
-                    echo "<div class='message left'>";
-                    $third_prompt = "To the question: $secondPromptResponse, the user replies: $input_two. Write one $randomMood comment to the user's reply. And ask another $randomMood short question related to the same topic.";
-                    $thirdPromptResponse = sendToApi($third_prompt); 
-                    $_SESSION['third_ai_question'] = $thirdPromptResponse;
-                    //echo $randomMood;
-            ?>
-                    <!--<p><em>The system responds in <span style="color: red;"><?php //echo $_SESSION['randomMood']; ?> </span>way!</em></p>-->
-                    <form method="post">
-                        <textarea type="text" name="input_three" placeholder="Type your answer..." class="form-control"></textarea>
-                        <br /><input type="submit" value="Submit" class="btn btn-success">
-                    </form>
-            <?php
-                    echo "</div>";
-                }
-            ?>
-            
-            <?php 
-            
-                if($_POST['input_three']){
-                    echo "<div class='message right'>";
-            
-                    $input_three = $_POST['input_three'];
-                    echo $input_three;
-                    $_SESSION['third_user_answer'] = $input_three;
-                    
-                    echo "</div><br /><br />";
-                }
-            ?>
-            
-            <?php
-                if($_POST['input_three']){
-                    echo "<div class='message left'>";
-                    $fourth_prompt = "To the question: $thirdPromptResponse, the user replies: $input_three. Write one $randomMood comment to the user's reply. And end the conversation and say have a nice day and thanks for your time :)";
-                    $fourthPromptResponse = sendToApi($fourth_prompt); 
-                    $_SESSION['ai_final_sentences'] = $fourthPromptResponse;
-                    //echo $randomMood;
-            ?>
-            
-                    <!--<p><em>The system responds in <span style="color: red;"><?php //echo $_SESSION['randomMood']; ?> </span>way!</em></p>-->
-                    <!--<form method="post">-->
-                    <!--    <input type="text" name="input_three" placeholder="Type your answer...">-->
-                    <!--    <input type="submit" value="Submit">-->
-                    <!--</form>-->
-            <?php
-                    echo "</div>";
-            ?>         
-                    
-                    
+        <?php
+        if (isset($_POST['topic'])) {
+            $topic = $_POST['topic'];
+            $_SESSION['topic'] = $topic;
+            echo "<div class='message right'>$topic</div><br /><br />";
+        }
+        ?>
+        <?php
+        if (isset($_POST['topic'])) {
+            $stepCounter = 1;
+            $stepCounter++;
+            echo "<div class='message left'>";
+            $first_prompt = "To the question: about which topic do you want to talk about, the user replies: $topic. Write one $randomMood comment to the user's reply. And ask another $randomMood short question related to the same topic.";
+            $firstPromptResponse = sendToApi($first_prompt); 
+            $_SESSION['first_ai_question'] = $firstPromptResponse;
+        ?>
+            <form method="post">
+                <textarea type="text" name="input_one" placeholder="Type your answer..." class="form-control"></textarea>
+                <br /><input type="submit" value="Submit" class="btn btn-success">
+            </form>
+        </div>
+        <?php
+        }
+        ?>
+        <?php
+        if (isset($_POST['input_one'])) {
+            $input_one = $_POST['input_one'];
+            echo "<div class='message right'>$input_one</div><br /><br />";
+        }
+        ?>
+        <?php
+        if (isset($_POST['input_one'])) {
+            echo "<div class='message left'>";
+            $second_prompt = "To the question: $firstPromptResponse, the user replies: $input_one. Write one $randomMood comment to the user's reply. And ask another $randomMood short question related to the same topic.";
+            $secondPromptResponse = sendToApi($second_prompt);
+            $_SESSION['second_ai_question'] = $secondPromptResponse;
+        ?>
+            <form method="post">
+                <textarea type="text" name="input_two" placeholder="Type your answer..." class="form-control"></textarea>
+                <br /><input type="submit" value="Submit" class="btn btn-success">
+            </form>
+        </div>
+        <?php
+        }
+        ?>
+        <?php
+        if (isset($_POST['input_two'])) {
+            $input_two = $_POST['input_two'];
+            echo "<div class='message right'>$input_two</div><br /><br />";
+        }
+        ?>
+        <?php
+        if (isset($_POST['input_two'])) {
+            echo "<div class='message left'>";
+            $third_prompt = "To the question: $secondPromptResponse, the user replies: $input_two. Write one $randomMood comment to the user's reply. And ask another $randomMood short question related to the same topic.";
+            $thirdPromptResponse = sendToApi($third_prompt); 
+            $_SESSION['third_ai_question'] = $thirdPromptResponse;
+        ?>
+            <form method="post">
+                <textarea type="text" name="input_three" placeholder="Type your answer..." class="form-control"></textarea>
+                <br /><input type="submit" value="Submit" class="btn btn-success">
+            </form>
+        </div>
+        <?php
+        }
+        ?>
+        <?php
+        if (isset($_POST['input_three'])) {
+            $input_three = $_POST['input_three'];
+            echo "<div class='message right'>$input_three</div><br /><br />";
+        }
+        ?>
+        <?php
+        if (isset($_POST['input_three'])) {
+            echo "<div class='message left'>";
+            $fourth_prompt = "To the question: $thirdPromptResponse, the user replies: $input_three. Write one $randomMood comment to the user's reply. And end the conversation and say have a nice day and thanks for your time :)";
+            $fourthPromptResponse = sendToApi($fourth_prompt); 
+            $_SESSION['ai_final_sentences'] = $fourthPromptResponse;
+        ?>
             <p>Please participate in our survey!</p>
             <form action="phase_3.php" method="POST">
-                <button class="btn btn-success" name="final_phase" type="submit">Go to the survery</button>
+                <button class="btn btn-success" name="final_phase" type="submit">Go to the survey</button>
             </form> 
-                    
-                    
-            <?php
-                }
-            ?>
-
+        </div>
+        <?php
+        }
+        ?>
     </div>
 </body>
 </html>
